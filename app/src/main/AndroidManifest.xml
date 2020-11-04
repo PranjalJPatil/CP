@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".passenger_search"></activity>
+        <activity android:name=".scheduledPassengerDet"></activity>
+        <activity android:name=".scheduledPassenger" />
+        <activity android:name=".scheduledDriverDet" />
+        <activity android:name=".scheduledDriver" />
+        <activity android:name=".passenger_search" />
         <activity android:name=".journey_details" />
         <activity android:name=".Login" />
         <activity android:name=".Register">
@@ -22,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".selectedDriverDet" />
     </application>
 
 </manifest>
