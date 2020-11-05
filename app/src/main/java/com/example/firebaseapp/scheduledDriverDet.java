@@ -35,7 +35,7 @@ public class scheduledDriverDet extends AppCompatActivity {
     Button CB;
     String id;
     List<String> group;
-    String JC;
+    String JC="";
      CollectionReference colref ;
     PassengerAdapter mPassengerAdapter;
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +44,12 @@ public class scheduledDriverDet extends AppCompatActivity {
         fauth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
         id = getIntent().getStringExtra("key");
-        JC=getIntent().getStringExtra("JoCo");
+        JC=getIntent().getStringExtra("key2");
+        Log.d("tag", "DocumentSnapshot data of JC" + JC);
         Log.d("tag",JC);
         final DocumentReference documentReference=fStore.collection("journey").document(fauth.getCurrentUser().getUid());
         colref = fStore.collection("users");
         //dname=findViewById(R.id.name);
-
         darea=findViewById(R.id.area);
         dcity=findViewById(R.id.city);
         ddest=findViewById(R.id.dest);

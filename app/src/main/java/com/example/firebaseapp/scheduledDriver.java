@@ -1,5 +1,6 @@
 package com.example.firebaseapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,7 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -32,11 +35,27 @@ public class scheduledDriver extends AppCompatActivity {
     FirebaseAuth fauth=FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheduled_driver);
         usource=findViewById(R.id.source);
         udest=findViewById(R.id.dest);
         uload=findViewById(R.id.load);
+        DocumentReference documentReference=db.collection("journey").document(fauth.getCurrentUser().getUid());
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d("tag", "DocumentSnapshot data: " + document.getString("JourneyCode"));
+                        para= document.getString("JourneyCode");
+                        Log.d("tag", "DocumentSnapshot data of para " + para);
+                    }
+            }
+        }});
+
+        Log.d("tag", "DocumentSnapshot data of para 2" + para);
         setUpRecyclerView();
     }
 
@@ -58,22 +77,12 @@ public class scheduledDriver extends AppCompatActivity {
                 String id = documentSnapshot.getId();
                  intent = new Intent(scheduledDriver.this, scheduledDriverDet.class);
                 intent.putExtra("key", id);
-                intent.putExtra("JoCo",getval());
+                intent.putExtra("key2",para);
                 startActivity(intent);
             }});
     }
-       String getval(){
 
-    DocumentReference documentReference=db.collection("journey").document(fauth.getCurrentUser().getUid());
-    documentReference.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
-        @Override
-        public void onSuccess(DocumentSnapshot documentSnapshot) {
-            para=(String)documentSnapshot.get("JourneyCode");
-            Log.d("tag",para);
-        }
-    });
-    return para;
- }
+
     @Override
     protected void onStart() {
         super.onStart();
