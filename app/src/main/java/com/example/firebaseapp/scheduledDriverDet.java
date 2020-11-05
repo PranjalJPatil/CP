@@ -35,6 +35,7 @@ public class scheduledDriverDet extends AppCompatActivity {
     Button CB;
     String id;
     List<String> group;
+    String JC;
      CollectionReference colref ;
     PassengerAdapter mPassengerAdapter;
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +44,12 @@ public class scheduledDriverDet extends AppCompatActivity {
         fauth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
         id = getIntent().getStringExtra("key");
+        JC=getIntent().getStringExtra("JoCo");
+        Log.d("tag",JC);
         final DocumentReference documentReference=fStore.collection("journey").document(fauth.getCurrentUser().getUid());
         colref = fStore.collection("users");
         //dname=findViewById(R.id.name);
+
         darea=findViewById(R.id.area);
         dcity=findViewById(R.id.city);
         ddest=findViewById(R.id.dest);
@@ -66,6 +70,8 @@ public class scheduledDriverDet extends AppCompatActivity {
                     dtime.setText(documentSnapshot.getString("time"));
                     dprice.setText(documentSnapshot.getString("price"));
                     group = (List<String>) documentSnapshot.get("passengers");
+                    String uid=group.get(0);
+                    Log.d("tag",uid);
                 }
                 else
                     Log.d("TAG","error!!");
@@ -80,21 +86,7 @@ public class scheduledDriverDet extends AppCompatActivity {
             }
         });
 
-    }
-    private void setUpRecyclerView() {
-        Query query = colref;
-        FirestoreRecyclerOptions<PassengerDetails> options = new FirestoreRecyclerOptions.Builder<PassengerDetails>()
-                .setQuery(query, PassengerDetails.class)
-                .build();
-        mPassengerAdapter = new PassengerAdapter(options);
-        RecyclerView recyclerView = findViewById(R.id.recylerview);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(mPassengerAdapter);
 
-    }
-    public void getval(){
-        fStore.collection("journey").document(fauth.getCurrentUser().getUid()).delete();
     }
     @Override
     protected void onStart() {
@@ -106,4 +98,31 @@ public class scheduledDriverDet extends AppCompatActivity {
         super.onStop();
         mPassengerAdapter.stopListening();
     }
+    private void setUpRecyclerView() {
+        Query query = colref.whereEqualTo("JourneyCode",JC);
+        FirestoreRecyclerOptions<PassengerDetails> options = new FirestoreRecyclerOptions.Builder<PassengerDetails>()
+                .setQuery(query, PassengerDetails.class)
+                .build();
+
+        mPassengerAdapter = new PassengerAdapter(options);
+        RecyclerView recyclerView = findViewById(R.id.recylerview);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(mPassengerAdapter);
+
+        mPassengerAdapter.setOnItemClickListener(new PassengerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                PassengerDetails DD= documentSnapshot.toObject(PassengerDetails.class);
+                String id = documentSnapshot.getId();
+                Intent intent = new Intent(scheduledDriverDet.this, selectedDriverDet.class);
+                intent.putExtra("key", id);
+                startActivity(intent);
+            }});
+    }
+    public void getval(){
+        fStore.collection("journey").document(fauth.getCurrentUser().getUid()).delete();
+    }
+
+
 }

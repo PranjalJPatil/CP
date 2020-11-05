@@ -52,6 +52,7 @@ public class scheduledPassenger extends AppCompatActivity {
                 String id = documentSnapshot.getId();
                 Intent intent = new Intent(scheduledPassenger.this, scheduledPassengerDet.class);
                 intent.putExtra("key", id);
+
                 startActivity(intent);
             }});
     }

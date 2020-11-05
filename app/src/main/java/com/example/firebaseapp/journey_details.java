@@ -83,6 +83,11 @@ public class journey_details extends AppCompatActivity {
                 user.put("destination",dest);
                 user.put("seatsLeft","4");
 
+                int min = 1000;
+                int max = 9999;
+                int b = (int)(Math.random()*(max-min+1)+min);
+
+                user.put("JourneyCode",String.valueOf(b));
 
                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

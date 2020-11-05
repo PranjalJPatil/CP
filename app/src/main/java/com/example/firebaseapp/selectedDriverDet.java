@@ -88,12 +88,24 @@ public class selectedDriverDet  extends AppCompatActivity {
             @Override
             public void onClick(View v) {
              getval();
+
             }
         });
 
 
     }
 
+    public void getval2(final String JC){
+        final DocumentReference documentReference2=fStore.collection("users").document(fauth.getCurrentUser().getUid());
+        documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Map<String, Object> data = new HashMap<>();
+                data.put("JourneyCode", JC);
+               documentReference2.set(data, SetOptions.merge());
+            }
+        });
+    }
     public void getval(){
         final DocumentReference documentReference2=fStore.collection("journey").document(id);
         documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
@@ -106,13 +118,14 @@ public class selectedDriverDet  extends AppCompatActivity {
                 documentReference2.update("seatsLeft",countStr);
                 String curruser=fauth.getCurrentUser().getUid();
 
-
                 int min = 1000;
                 int max = 9999;
                 int b = (int)(Math.random()*(max-min+1)+min);
 
                 Map<String, Object> data = new HashMap<>();
                 data.put(fauth.getCurrentUser().getUid(), Integer.toString(b));
+
+                getval2((String) documentSnapshot.get("JourneyCode"));
 
                 fStore.collection("journey").document(id).set(data, SetOptions.merge());
                 documentReference2.update("passengers", FieldValue.arrayUnion(curruser));
