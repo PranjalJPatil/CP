@@ -55,7 +55,6 @@ public class selectedDriverDet  extends AppCompatActivity {
         dtime=findViewById(R.id.time);
         dprice=findViewById(R.id.price);
         CB=findViewById(R.id.confirmBooking);
-        SJ=findViewById(R.id.startJourney);
 
         StorageReference fileref = mStorageReference.child("users/"+id+"/profile.jpg");
         fileref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -92,13 +91,9 @@ public class selectedDriverDet  extends AppCompatActivity {
             }
         });
 
-        SJ.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
+
     public void getval(){
         final DocumentReference documentReference2=fStore.collection("journey").document(id);
         documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {

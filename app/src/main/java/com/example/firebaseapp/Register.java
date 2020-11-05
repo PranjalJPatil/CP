@@ -102,6 +102,7 @@ public class Register extends AppCompatActivity {
                             Map<String,Object> user=new HashMap<>();
                             user.put("fName",fullname);
                             user.put("email", email);
+                            user.put("uid",fAuth.getCurrentUser().getUid());
                             user.put("phoneno",phone);
                             user.put("LicenseNO",licenseno);
                             user.put("AadharCardNo",aadharcard);

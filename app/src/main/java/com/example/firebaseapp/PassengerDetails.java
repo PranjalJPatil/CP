@@ -1,31 +1,30 @@
 package com.example.firebaseapp;
 
 public class PassengerDetails {
-    String name,phoneno;
+    String fName,phoneno;
 
     public PassengerDetails(){
 
     }
 
-
-    public PassengerDetails(String name, String phoneno) {
-        this.name = name;
+    public PassengerDetails(String fName, String phoneno) {
+        this.fName = fName;
         this.phoneno = phoneno;
     }
 
-    public String getName() {
-        return name;
+    public String getfName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setfName(String fName) {
+        this.fName = fName;
     }
 
-    public String getPhoneno() {
+    public String getphoneno() {
         return phoneno;
     }
 
-    public void setPhoneno(String phoneno) {
+    public void setphoneno(String phoneno) {
         this.phoneno = phoneno;
     }
 }

@@ -82,7 +82,6 @@ public class passenger_search extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         mDriverAdapter.startListening();
     }
     @Override

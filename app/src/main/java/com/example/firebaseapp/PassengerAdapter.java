@@ -18,9 +18,8 @@ class PassengerAdapter extends FirestoreRecyclerAdapter<PassengerDetails,Passeng
     }
     @Override
     protected void onBindViewHolder(@NonNull PassengerAdapter.PassengerHolder holder, int position, @NonNull PassengerDetails model) {
-        holder.name.setText(model.getName());
-        holder.phone.setText(model.getPhoneno());
-
+        holder.name.setText(model.getfName());
+        holder.phone.setText(model.getphoneno());
     }
     @NonNull
     @Override
@@ -35,7 +34,7 @@ class PassengerAdapter extends FirestoreRecyclerAdapter<PassengerDetails,Passeng
 
         public PassengerHolder(View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.name);
+            name = itemView.findViewById (R.id.name);
             phone = itemView.findViewById(R.id.phoneno);
         }
     }
