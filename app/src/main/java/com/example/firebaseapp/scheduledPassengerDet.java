@@ -75,7 +75,10 @@ public class scheduledPassengerDet extends AppCompatActivity {
         fStore.collection("journey").document(id).update("passengers",
         FieldValue.arrayRemove(fauth.getCurrentUser().getUid()));
 
-
+        DocumentReference docRef2 = fStore.collection("users").document(fauth.getCurrentUser().getUid());
+        Map<String,Object> updates2 = new HashMap<>();
+        updates2.put("JourneyCode", FieldValue.delete());
+        docRef2.update(updates2);
 
         DocumentReference docRef = fStore.collection("journey").document(id);
         Map<String,Object> updates = new HashMap<>();
