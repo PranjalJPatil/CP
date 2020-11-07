@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryPassengerDet">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="137dp"
+        android:layout_height="132dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Name"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="NAME:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Area"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="AREA:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="City"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="CITY:"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Destination"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/destText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="DESTINATION:"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dest"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Date"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dest"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="DATE:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Time"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="TIME:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="price"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="PRICE:"
+        android:textColor="#000000" />
+
+</RelativeLayout>

@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scheduledPassengerDet"></activity>
+        <activity android:name=".HistoryDriverDet"></activity>
+        <activity android:name=".HistoryPassengerDet" />
+        <activity android:name=".HistoryPassenger" />
+        <activity android:name=".HistoryDriver" />
+        <activity android:name=".scheduledPassengerDet" />
         <activity android:name=".scheduledPassenger" />
         <activity android:name=".scheduledDriverDet" />
         <activity android:name=".scheduledDriver" />

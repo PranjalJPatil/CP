@@ -143,5 +143,20 @@
         android:layout_below="@id/button"
         />
 
+    <Button
+        android:id="@+id/Dhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/button"
+        android:layout_below="@+id/address"
+        android:text="History(Driver)" />
+
+    <Button
+        android:id="@+id/Phistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_below="@+id/address"
+        android:text="History(Passenger)" />
 
 </RelativeLayout>

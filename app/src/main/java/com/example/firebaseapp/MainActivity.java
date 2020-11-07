@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    Button Logout,createJ,passengerJ,upload,sJ,sjp;
+    Button Logout,createJ,passengerJ,upload,sJ,sjp,HD,HP;
     ImageView profileimage;
     StorageReference mStorageReference;
 
@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         upload = findViewById(R.id.upload);
 
         sJ=findViewById(R.id.SJourney);
+        HD=findViewById(R.id.Dhistory);
+        HP=findViewById(R.id.Phistory);
         sjp=findViewById(R.id.SJp);
         Logout=findViewById(R.id.button);
         createJ=findViewById(R.id.journeyDet);
@@ -137,8 +139,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
+        HD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),HistoryDriver.class));
+            }
+        });
+        HP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), HistoryPassenger.class));
+            }
+        });
     }
 
     @Override

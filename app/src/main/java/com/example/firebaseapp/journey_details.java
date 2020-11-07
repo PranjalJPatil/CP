@@ -26,7 +26,8 @@ import java.util.Map;
 
 public class journey_details extends AppCompatActivity {
     Map<String,Object> user=new HashMap<>();
-            List<String> pb= Arrays.asList(new String[4]);
+            List<String> pb= Arrays.asList();
+    List<String> stj= Arrays.asList();
     Button backToprofile,submit;
     EditText  dprice,darea,dcity,ddest,ddate,dtime;;
     FirebaseFirestore fStore;
@@ -82,7 +83,8 @@ public class journey_details extends AppCompatActivity {
                 user.put("price",price);
                 user.put("destination",dest);
                 user.put("seatsLeft","4");
-
+                user.put("passengers",pb);
+                user.put("startJourney",stj);
                 int min = 1000;
                 int max = 9999;
                 int b = (int)(Math.random()*(max-min+1)+min);
