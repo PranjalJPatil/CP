@@ -16,13 +16,25 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:orientation="vertical">
-      <EditText
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginEnd="10dp"
+               android:ems="10"
+               android:text="Enter your Journey Details"
+               android:textColor="#0B0A0A"
+               android:textSize="20sp"></TextView>
+
+           <EditText
           android:id="@+id/area"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:ems="10"
           android:hint="Pick up area"
-          android:layout_marginTop="60dp"
+          android:layout_marginTop="10dp"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:backgroundTint="#000000"
@@ -33,7 +45,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="City"
-          android:layout_marginTop="25dp"
+          android:layout_marginTop="10dp"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:backgroundTint="#000000"
@@ -47,7 +59,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="Destination"
-          android:layout_marginTop="25dp"
+          android:layout_marginTop="10dp"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:backgroundTint="#000000"
@@ -66,14 +78,14 @@
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:backgroundTint="#000000"
-          android:layout_marginTop="25dp"/>
+          android:layout_marginTop="10dp"/>
 
            <EditText
                android:id="@+id/time"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_marginStart="10dp"
-               android:layout_marginTop="25dp"
+               android:layout_marginTop="10dp"
                android:layout_marginEnd="10dp"
                android:backgroundTint="#000000"
                android:ems="10"
@@ -84,7 +96,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="Price"
-          android:layout_marginTop="25dp"
+          android:layout_marginTop="10dp"
           android:layout_marginStart="10dp"
           android:layout_marginEnd="10dp"
           android:backgroundTint="#000000"
@@ -96,18 +108,18 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_gravity="center"
-               android:layout_marginTop="80dp"
+               android:layout_marginTop="10dp"
                android:text="Submit" />
 
            <Button
-          android:id="@+id/goProfile"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Go back"
-          android:layout_gravity="center"
-          android:layout_marginTop="20dp">
+               android:id="@+id/goProfile"
+               android:layout_width="53dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:background="@android:drawable/ic_menu_revert">
 
-      </Button>
+           </Button>
        </LinearLayout>
       </ScrollView>
   </RelativeLayout>

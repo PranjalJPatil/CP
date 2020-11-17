@@ -10,32 +10,72 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/buttonborder">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/dateText"
+            android:text="DD/MM/YYYY"
+            android:textColor="#F8F4F4">
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Date:  "
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#F8F4F4">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentStart="true"
+            android:textColor="#F8F4F4"
+            android:text="Time:  "
+          >
+
+        </TextView>
 
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/date"
             android:layout_toRightOf="@+id/timeText"
-            android:layout_alignParentTop="true">
-
-        </TextView>
-        <TextView
-            android:id="@+id/timeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Time:  "
-            android:layout_alignParentTop="true">
+            android:text="HH:MM(24 hour clock)"
+            android:textColor="#F8F4F4"
+            >
 
         </TextView>
 
         <TextView
             android:id="@+id/priceText"
             android:layout_width="wrap_content"
+            android:textColor="#F8F4F4"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@id/time"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentStart="true"
             android:text="Price:  ">
 
         </TextView>
@@ -44,29 +84,12 @@
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/priceText"
             android:layout_below="@id/time"
-            android:text="Price">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/dateText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@id/price"
-            android:text="Date:  ">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/price"
-            android:layout_toRightOf="@+id/dateText"
-            android:text="Date">
+            android:textColor="#F8F4F4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/priceText"
+            android:text="in Rs">
 
         </TextView>
     </RelativeLayout>

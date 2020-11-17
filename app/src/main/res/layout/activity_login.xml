@@ -15,6 +15,8 @@
         android:fontFamily="sans-serif-black"
         android:text="CARPOOLING APP"
         android:textColor="#0E0D0C"
+        android:shadowColor="#718093"
+        android:shadowRadius="7"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,17 +27,20 @@
 
     <EditText
         android:id="@+id/Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/common_google_signin_btn_text_dark_focused"
-        android:ems="10"
-        android:hint="Enter Your Email Id"
+
+        android:hint="Email Id"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="#000000"
+        android:backgroundTint="#000000"
+        android:textColorHint="#353b48"
+        android:layout_width="262dp"
+        android:layout_height="46dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:ems="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -45,29 +50,32 @@
 
     <EditText
         android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#000000"
         android:ems="10"
-        android:hint="Enter Your Password"
+        android:hint="Password"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="#000000"
+        android:textColorHint="#353b48"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <Button
         android:id="@+id/BtnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/buttonborder"
+        android:textColor="#F6F4F4"
         android:text="Login"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
@@ -80,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="84dp"
-        android:text="New Here?Create Account"
+        android:text="New Here? Create an Account"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,5 +96,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnLogin"
         app:layout_constraintVertical_bias="0.417" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Email"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/ei3" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.118"
+        app:srcCompat="@drawable/pi3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

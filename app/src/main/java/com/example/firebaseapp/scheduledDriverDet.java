@@ -196,13 +196,12 @@ public class scheduledDriverDet extends AppCompatActivity {
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
                 PassengerDetails DD= documentSnapshot.toObject(PassengerDetails.class);
                 final String id = documentSnapshot.getId();
-
-
+                
 //                Intent intent = new Intent(scheduledDriverDet.this, selectedDriverDet.class);
 //                intent.putExtra("key", id);
 //                startActivity(intent);
                 AlertDialog.Builder builder = new AlertDialog.Builder(scheduledDriverDet.this);
-                builder.setTitle("Title");
+                builder.setTitle("Enter Passenger Code");
 
 //              Set up the input
                 final EditText input = new EditText(scheduledDriverDet.this);
