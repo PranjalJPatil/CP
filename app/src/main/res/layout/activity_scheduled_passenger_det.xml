@@ -10,71 +10,126 @@
         android:id="@+id/imageView2"
         android:layout_width="137dp"
         android:layout_height="132dp"
-
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20sp" />
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="5sp"/>
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+
         android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
         android:padding="5sp"
         android:text="Name"
-        android:textColor="#3F51B5" />
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/nameText"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_margin="5sp"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
         android:padding="5sp"
-        android:text="NAME:"
+        android:text="email"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20sp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/phoneno"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:padding="5sp"
+        android:text="Phone No"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20sp"
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/area"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/areaText"
+        android:layout_marginStart="7sp"
         android:padding="5sp"
         android:text="Area"
         android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/areaText"
+        android:layout_margin="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/imageView2"
         android:padding="5sp"
-        android:text="AREA:"
+        android:text="Area:"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/passengercode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passengercodeText"
+        android:layout_marginStart="170sp"
+        android:padding="5sp"
+        android:text="Passenger Code"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/passengercodeText"
+        android:layout_marginTop="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginStart="170sp"
+        android:padding="5sp"
+        android:text="Passenger Code:"
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/city"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityText"
+        android:layout_marginStart="7sp"
+        android:padding="5sp"
+        android:text="City"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:padding="5sp"
+        android:text="City:"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/destText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/area"
         android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
         android:padding="5sp"
-        android:text="City"
-        android:textColor="#3F51B5" />
+        android:layout_marginStart="100sp"
+        android:layout_toRightOf="@+id/city"
 
-    <TextView
-        android:id="@+id/cityText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/area"
-        android:layout_margin="5sp"
-        android:padding="5sp"
-        android:text="CITY:"
+        android:text="Destination:"
         android:textColor="#000000" />
 
 
@@ -82,85 +137,92 @@
         android:id="@+id/dest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/city"
+        android:layout_below="@+id/destText"
         android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_marginStart="100sp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
         android:padding="5sp"
-        android:text="Destination"
+        android:layout_toRightOf="@+id/city"
+
+
+        android:text="Dest"
         android:textColor="#3F51B5" />
-
-    <TextView
-        android:id="@+id/destText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/city"
-        android:layout_margin="5sp"
-        android:padding="5sp"
-        android:text="DESTINATION:"
-        android:textColor="#000000" />
-
 
     <TextView
         android:id="@+id/date"
+        android:layout_margin="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dest"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/dateText"
+
         android:padding="5sp"
         android:text="Date"
         android:textColor="#3F51B5" />
-
     <TextView
         android:id="@+id/dateText"
+        android:layout_margin="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dest"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/city"
         android:padding="5sp"
-        android:text="DATE:"
+        android:text="Date:"
+
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/date"
+        android:layout_below="@+id/timeText"
+
+        android:layout_toRightOf="@+id/date"
         android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_marginStart="75sp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
         android:padding="5sp"
         android:text="Time"
         android:textColor="#3F51B5" />
-
     <TextView
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/date"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/dest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
         android:padding="5sp"
-        android:text="TIME:"
+        android:layout_marginStart="100sp"
+        android:layout_toRightOf="@+id/dateText"
+
+        android:text="     Time:"
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/price"
+        android:layout_margin="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/time"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5sp"
+        android:layout_below="@+id/priceText"
+
         android:padding="5sp"
         android:text="price"
         android:textColor="#3F51B5" />
-
     <TextView
         android:id="@+id/priceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/time"
-        android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="PRICE:"
+        android:text="Price:"
+        android:layout_margin="5sp"
         android:textColor="#000000" />
 
     <Button
@@ -169,5 +231,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/price"
         android:layout_centerHorizontal="true"
-        android:text="Cancel Booking" />
+        android:background="@drawable/buttonborder"
+        android:padding="5sp"
+        android:text="Cancel Booking"
+        android:textColor="#F1EAEA" />
 </RelativeLayout>

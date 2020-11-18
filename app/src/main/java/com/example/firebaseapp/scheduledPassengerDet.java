@@ -2,10 +2,12 @@ package com.example.firebaseapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -14,6 +16,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,12 +27,14 @@ import static com.google.firebase.firestore.FieldValue.delete;
 
 public class scheduledPassengerDet extends AppCompatActivity {
 
-    TextView darea,dcity,ddest,ddate,dtime,dprice,dname;
+    TextView darea,dcity,ddest,ddate,dtime,dprice,dname,dpcode,demail,dphone;
     FirebaseAuth fauth;
     FirebaseFirestore fStore;
     String name;
     Button CB;
+    ImageView profileimage;
     String id;
+    StorageReference     mStorageReference;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheduled_passenger_det);
@@ -35,8 +42,13 @@ public class scheduledPassengerDet extends AppCompatActivity {
         fStore=FirebaseFirestore.getInstance();
         id = getIntent().getStringExtra("key");
         final DocumentReference documentReference=fStore.collection("journey").document(id);
-
+        final DocumentReference documentReference2=fStore.collection("users").document(id);
+        dphone=findViewById(R.id.phoneno);
+        profileimage = findViewById(R.id.imageView2);
+        demail=findViewById(R.id.email);
+        mStorageReference = FirebaseStorage.getInstance().getReference();
         dname=findViewById(R.id.name);
+        dpcode=findViewById(R.id.passengercode);
         darea=findViewById(R.id.area);
         dcity=findViewById(R.id.city);
         ddest=findViewById(R.id.dest);
@@ -44,11 +56,26 @@ public class scheduledPassengerDet extends AppCompatActivity {
         dtime=findViewById(R.id.time);
         dprice=findViewById(R.id.price);
         CB=findViewById(R.id.cancelBooking);
-
+        StorageReference fileref = mStorageReference.child("users/"+id+"/profile.jpg");
+        fileref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(profileimage);
+            }
+        });
+        documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                dphone.setText(documentSnapshot.getString("phoneno"));
+                demail.setText(documentSnapshot.getString("email"));
+            }
+        });
         documentReference.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()) {
+
+                    dpcode.setText(documentSnapshot.getString(fauth.getCurrentUser().getUid()));
                     dname.setText(documentSnapshot.getString("name"));
                     darea.setText(documentSnapshot.getString("area"));
                     dcity.setText(documentSnapshot.getString("city"));

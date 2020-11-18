@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class selectedDriverDet  extends AppCompatActivity {
-    TextView darea,dcity,ddest,ddate,dtime,dprice,dname;
+    TextView darea,dcity,ddest,ddate,dtime,dprice,dname,dphone,demail;
     FirebaseAuth fauth;
     FirebaseFirestore fStore;
     String name;
@@ -45,8 +45,11 @@ public class selectedDriverDet  extends AppCompatActivity {
         fStore=FirebaseFirestore.getInstance();
         id = getIntent().getStringExtra("key");
         final DocumentReference documentReference=fStore.collection("journey").document(id);
+        final DocumentReference documentReference2=fStore.collection("users").document(id);
         profileimage = findViewById(R.id.imageView2);
         mStorageReference = FirebaseStorage.getInstance().getReference();
+        demail=findViewById(R.id.email);
+        dphone=findViewById(R.id.phoneno);
         dname=findViewById(R.id.name);
         darea=findViewById(R.id.area);
         dcity=findViewById(R.id.city);
@@ -63,7 +66,13 @@ public class selectedDriverDet  extends AppCompatActivity {
                 Picasso.get().load(uri).into(profileimage);
             }
         });
-
+        documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                dphone.setText(documentSnapshot.getString("phoneno"));
+                demail.setText(documentSnapshot.getString("email"));
+            }
+        });
         documentReference.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {

@@ -23,7 +23,7 @@
 
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="NAME:"
+        android:text="Name:"
         android:textColor="#000000" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_below="@+id/name"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="AREA:"
+        android:text="Area:"
         android:textColor="#000000" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_below="@+id/area"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="CITY:"
+        android:text="City:"
         android:textColor="#000000" />
 
 
@@ -87,7 +87,7 @@
         android:layout_below="@+id/city"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="DESTINATION:"
+        android:text="Destnation:"
         android:textColor="#000000" />
 
 
@@ -109,7 +109,7 @@
         android:layout_below="@+id/dest"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="DATE:"
+        android:text="Date:"
         android:textColor="#000000" />
 
     <TextView
@@ -130,7 +130,7 @@
         android:layout_below="@+id/date"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="TIME:"
+        android:text="Time:"
         android:textColor="#000000" />
 
     <TextView
@@ -151,7 +151,7 @@
         android:layout_below="@+id/time"
         android:layout_margin="5sp"
         android:padding="5sp"
-        android:text="PRICE:"
+        android:text="Price:"
         android:textColor="#000000" />
 
     <TextView
@@ -169,6 +169,7 @@
     <TextView
         android:id="@+id/passenger1name"
         android:layout_width="wrap_content"
+        android:padding="5sp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Passenger"
         android:layout_marginStart="5sp"
@@ -182,7 +183,7 @@
     <TextView
         android:id="@+id/passenger1phone"
         android:layout_width="wrap_content"
-
+        android:padding="5sp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Passenger"
         android:layout_centerHorizontal="true"
@@ -204,10 +205,11 @@
         android:layout_marginTop="5sp"
         android:layout_marginEnd="5sp"
         android:layout_marginBottom="5sp"
-
+        android:padding="5sp"
         android:textColor="#030304" />
 
     <TextView
+        android:padding="5sp"
         android:id="@+id/passenger2phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -220,7 +222,7 @@
         android:id="@+id/passenger3name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:padding="5sp"
         android:layout_margin="5sp"
         android:textColor="#070707"
         android:layout_below="@+id/passenger2name"
@@ -234,7 +236,7 @@
         android:layout_below="@+id/passenger2name"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="101dp"
-
+        android:padding="5sp"
         android:layout_marginTop="2dp"
        />
 
@@ -243,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#070707"
-
+        android:padding="5sp"
         android:layout_margin="5sp"
         android:layout_below="@+id/passenger3name"
 
@@ -255,6 +257,7 @@
         android:textColor="#070707"
         android:layout_below="@+id/passenger3name"
         android:layout_centerHorizontal="true"
+        android:padding="5sp"
         android:layout_marginLeft="101dp"
         android:layout_marginTop="2dp"
  />
