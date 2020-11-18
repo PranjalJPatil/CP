@@ -103,6 +103,7 @@ public class scheduledDriverDet extends AppCompatActivity {
             public void onClick(View v) {
                 EJ.setVisibility(View.VISIBLE);
                 SJ.setVisibility(View.INVISIBLE);
+                CB.setVisibility(View.INVISIBLE);
             }
         });
         EJ.setOnClickListener(new View.OnClickListener() {
@@ -196,7 +197,8 @@ public class scheduledDriverDet extends AppCompatActivity {
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
                 PassengerDetails DD= documentSnapshot.toObject(PassengerDetails.class);
                 final String id = documentSnapshot.getId();
-                
+
+
 //                Intent intent = new Intent(scheduledDriverDet.this, selectedDriverDet.class);
 //                intent.putExtra("key", id);
 //                startActivity(intent);
@@ -225,6 +227,9 @@ public class scheduledDriverDet extends AppCompatActivity {
                                     Toast.makeText(scheduledDriverDet.this,"Otp success",Toast.LENGTH_SHORT).show();
                                     docref.update("startJourney",FieldValue.arrayUnion(id));
                                     docref.update("passengers",FieldValue.arrayRemove(id));
+                                }
+                                else{
+                                    Toast.makeText(scheduledDriverDet.this,"Wrong Otp Entered",Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

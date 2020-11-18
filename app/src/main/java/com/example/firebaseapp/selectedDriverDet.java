@@ -96,7 +96,7 @@ public class selectedDriverDet  extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-             getval();
+                getval();
 
             }
         });
@@ -111,7 +111,7 @@ public class selectedDriverDet  extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Map<String, Object> data = new HashMap<>();
                 data.put("JourneyCode", JC);
-               documentReference2.set(data, SetOptions.merge());
+                documentReference2.set(data, SetOptions.merge());
             }
         });
     }
@@ -120,7 +120,7 @@ public class selectedDriverDet  extends AppCompatActivity {
         documentReference2.get().addOnSuccessListener(this, new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-               String seats= (String) documentSnapshot.getString("seatsLeft");
+                String seats= (String) documentSnapshot.getString("seatsLeft");
                 int i=Integer.parseInt(seats);
                 i--;
                 String countStr = String.valueOf(i);

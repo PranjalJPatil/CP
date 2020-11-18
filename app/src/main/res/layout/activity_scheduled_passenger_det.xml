@@ -73,15 +73,7 @@
         android:padding="5sp"
         android:text="Area:"
         android:textColor="#000000" />
-    <TextView
-        android:id="@+id/passengercode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passengercodeText"
-        android:layout_marginStart="170sp"
-        android:padding="5sp"
-        android:text="Passenger Code"
-        android:textColor="#3F51B5" />
+
 
     <TextView
         android:id="@+id/passengercodeText"
@@ -93,6 +85,16 @@
         android:padding="5sp"
         android:text="Passenger Code:"
         android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/passengercode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passengercodeText"
+        android:layout_marginStart="170sp"
+        android:padding="5sp"
+        android:text="Passenger Code"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/city"

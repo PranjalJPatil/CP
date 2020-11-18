@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -71,7 +72,7 @@ public class journey_details extends AppCompatActivity {
                 time=dtime.getText().toString();
                 dest=ddest.getText().toString();
                 price=dprice.getText().toString();
-
+                Toast.makeText(journey_details.this,"Journey Created Successfully",Toast.LENGTH_SHORT).show();
 
                 DocumentReference documentReference=fStore.collection("journey").document(uid);
                 user.put("name",name);
