@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Profile"
+            android:icon="@drawable/home_icon"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/logout_icon"
+            ></item>
+
+
+
+    </group>
+
+
+    <item android:title="History">
+
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_historydriver"
+                android:title="Driver"/>
+
+            <item
+                android:id="@+id/nav_historyPassenger"
+                android:title="Passenger"/>
+            </group>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Scheduled">
+
+
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_scheduledriver"
+                        android:title="Driver"/>
+
+                    <item
+                        android:id="@+id/nav_schedulePassenger"
+                        android:title="Passenger"/>
+                </group>
+
+            </menu>
+
+    </item>
+
+
+    <item android:title="Communication">
+
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share"/>
+        </menu>
+
+    </item>
+
+
+
+</menu>

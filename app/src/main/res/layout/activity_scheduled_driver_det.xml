@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".scheduledDriverDet">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="1dp"
+        android:id="@+id/toolbar"
+        android:background="@drawable/toolbarlayout">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5sp"
+            android:text="JOURNEY DETAILS"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/areaText"
+        android:layout_below="@+id/endJourney"
+        android:layout_centerHorizontal="true"
+        android:padding="5sp"
+        android:layout_margin="5sp"
+        android:text="Area"
+        android:textColor="#3F51B5" />
+
+
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancelBooking"
+        android:padding="5sp"
+        android:text="Area:"
+        android:textColor="#000000" />
+
+
+
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_toRightOf="@+id/cityText"
+        android:layout_marginStart="7sp"
+        android:padding="5sp"
+        android:text="City"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:padding="5sp"
+        android:text="City:"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/destText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+        android:padding="5sp"
+        android:layout_marginStart="100sp"
+        android:layout_toRightOf="@+id/city"
+
+        android:text="Destination:"
+        android:textColor="#000000" />
+
+
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/areaText"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+
+        android:padding="5dp"
+        android:layout_toRightOf="@+id/destText"
+
+
+        android:text="Dest"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityText"
+        android:layout_toRightOf="@+id/dateText"
+        android:padding="5sp"
+        android:text="Date"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:padding="5sp"
+        android:text="Date:"
+
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destText"
+
+        android:layout_toRightOf="@+id/timeText"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="5sp"
+        android:text="Time"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destText"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+
+        android:padding="5dp"
+        android:layout_marginStart="150dp"
+
+
+
+        android:layout_toRightOf="@+id/dateText"
+
+        android:text="Time:"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateText"
+        android:layout_toRightOf="@id/priceText"
+        android:padding="5dp"
+        android:text="price"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Price:"
+
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/cancelBooking"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/buttonborder"
+        android:padding="5sp"
+        android:layout_alignParentRight="true"
+        android:text="Cancel Journey"
+        android:textColor="#FAF6F6" />
+
+    <Button
+        android:background="@drawable/buttonborder"
+        android:id="@+id/startJourney"
+        android:layout_width="wrap_content"
+        android:padding="5sp"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:text="Start Journey"
+        android:textColor="#FAF6F6"
+        android:layout_below="@+id/toolbar"
+        />
+    <TextView
+        android:id="@+id/passengerlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_marginStart="7sp"
+        android:padding="5sp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Passenger List"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_below="@+id/passengerlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/endJourney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+
+        android:padding="5sp"
+        android:textSize="12sp"
+        android:text="END Journey"
+        android:background="@drawable/buttonborder"
+        android:textColor="#FAF6F6"
+        android:textColorHighlight="#FFFAFA"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible" />
+
+
+
+</RelativeLayout>

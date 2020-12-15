@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#130606"
+    tools:context=".HistoryDriverDet">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Name"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="NAME:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Area"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="AREA:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="City"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="CITY:"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Destination"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/destText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="DESTINATION:"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dest"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Date"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dest"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="DATE:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="Time"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="TIME:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="price"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_margin="5sp"
+        android:padding="5sp"
+        android:text="PRICE:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/Passenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceText"
+        android:layout_margin="5sp"
+        android:drawablePadding="5dp"
+        android:padding="5sp"
+        android:text="Passenger Details:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/passenger1name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Passenger"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger1phone"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Passenger"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger2name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger1name"
+        android:layout_margin="5sp"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger2phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger1name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="2dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger3name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/passenger2name"
+        android:layout_margin="5sp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger3phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger2name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="2dp"
+
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/passenger4name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger3name"
+
+        android:layout_margin="5sp"
+        android:textColor="#FFFFFF"
+
+        />
+
+    <TextView
+        android:id="@+id/passenger4phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passenger3name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="2dp"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

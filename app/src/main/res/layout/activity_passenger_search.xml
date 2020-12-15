@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".passenger_search">
+
+
+    <EditText
+        android:id="@+id/source"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#000000"
+        android:textColorHint="#353b48"
+        android:hint="Source" />
+
+    <EditText
+        android:id="@+id/dest"
+        android:layout_width="100dp"
+        android:backgroundTint="#000000"
+        android:textColorHint="#353b48"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/source"
+        android:hint="Destination" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_below="@+id/dest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="31dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/dest"
+        android:background="@android:drawable/ic_search_category_default" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/homei3" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/source"
+        app:srcCompat="@drawable/addressi3" />
+
+
+</RelativeLayout>
